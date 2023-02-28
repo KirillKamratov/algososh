@@ -1,0 +1,21 @@
+.formStack {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 50%;
+  gap: 12px;
+}
+
+.listStack {
+  display: flex;
+  list-style-type: none;
+  margin: 48px auto 100px;
+  justify-content: center;
+  gap: 78px 16px;
+  max-width: 944px;
+  flex-wrap: wrap;
+}
+
+.clear {
+  margin-left: 80px;
+}

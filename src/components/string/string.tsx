@@ -10,21 +10,23 @@ import {Circle} from "../ui/circle/circle";
 
 export const StringComponent: React.FC = () => {
 
-  const [ inputString, setInputString ] = useState('')
+  const [ array, setArray ] = useState('')
   const [ isLoading, setIsLoading ] = useState(false)
   const [ inputValue, setInputValue ] = useState<TArray[]>([])
 
   const onChange = (event: ChangeEvent<HTMLInputElement>) => {
-    setInputString(event.target.value)
+    setArray(event.target.value)
   }
 
   const reverse = async ( event: FormEvent<HTMLFormElement> ) => {
+
     event.preventDefault()
+
     setIsLoading(true)
-    setInputString('')
+    setArray('')
 
     const arrayElements : TArray[] = []
-    inputString.split('').forEach( e => {
+    array.split('').forEach( e => {
       arrayElements.push({ value: e, state: ElementStates.Default })
     })
     setInputValue([...arrayElements])
@@ -49,24 +51,25 @@ export const StringComponent: React.FC = () => {
 
   return (
     <SolutionLayout title="Строка">
-      <form className={stringStyles.form}
-            onSubmit={reverse}
+      <form
+        className={stringStyles.formArray}
+        onSubmit={reverse}
       >
         <Input
           isLimitText={true}
           maxLength={11}
           onChange={onChange}
-          value={isLoading ? 'Пожалуйста, ожидайте': inputString}
+          value={isLoading ? 'Пожалуйста, ожидайте': array}
         />
         <Button
           text={'Развернуть'}
           type={'submit'}
           linkedList={'small'}
-          disabled={!inputString}
+          disabled={!array}
           isLoader={isLoading}
         />
       </form>
-      <ul className={stringStyles.list}>
+      <ul className={stringStyles.listArray}>
         {inputValue.map((elem, key) => {
           return (
             <li key={key}>

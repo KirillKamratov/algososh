@@ -1,4 +1,4 @@
-.formArray {
+.formFib {
   display: flex;
   justify-content: center;
   margin: 0 auto;
@@ -6,12 +6,12 @@
   gap: 12px;
 }
 
-.listArray {
+.listFib {
   display: flex;
-  flex-direction: row;
+  list-style-type: none;
+  margin: 48px auto 100px;
   justify-content: center;
-  padding: 100px 0 0;
-  margin: 10px;
-  list-style: none;
-  gap: 7px;
+  gap: 78px 16px;
+  max-width: 944px;
+  flex-wrap: wrap;
 }
