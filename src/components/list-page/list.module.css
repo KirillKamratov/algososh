@@ -1,0 +1,33 @@
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0 auto 12px;
+  width: 90%;
+  gap: 12px;
+}
+
+.input {
+  max-width: 204px;
+}
+
+.list {
+  display: flex;
+  list-style-type: none;
+  margin: 78px auto 100px;
+  justify-content: center;
+  gap: 78px 16px;
+  max-width: 944px;
+  flex-wrap: wrap;
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.arrow {
+  margin-left: 25px;
+  margin-right: 3px;
+}

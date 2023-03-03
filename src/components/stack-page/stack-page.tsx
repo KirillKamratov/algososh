@@ -8,6 +8,7 @@ import { TArray } from "../../types/array";
 import { ElementStates } from "../../types/element-states";
 import { delay } from "../../utils/utils";
 import { Circle } from "../ui/circle/circle";
+import {SHORT_DELAY_IN_MS} from "../../constants/delays";
 
 
 export const StackPage: React.FC = () => {
@@ -26,7 +27,7 @@ export const StackPage: React.FC = () => {
     stack.push({ value: inputValue, state: ElementStates.Changing });
     setArray([...stack.getStack()]);
     setInputValue('');
-    await delay(500);
+    await delay(SHORT_DELAY_IN_MS);
     const temp = stack.peak();
     if (temp) {
       temp.state = ElementStates.Default;
@@ -40,7 +41,7 @@ export const StackPage: React.FC = () => {
       temp.state = ElementStates.Changing
     }
     setArray([...stack.getStack()])
-    await delay(500)
+    await delay(SHORT_DELAY_IN_MS)
     stack.pop()
     setArray([...stack.getStack()])
   }

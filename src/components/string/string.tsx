@@ -7,6 +7,7 @@ import { TArray } from "../../types/array";
 import { ElementStates } from "../../types/element-states";
 import { delay, swap } from "../../utils/utils";
 import {Circle} from "../ui/circle/circle";
+import {DELAY_IN_MS} from "../../constants/delays";
 
 export const StringComponent: React.FC = () => {
 
@@ -38,7 +39,7 @@ export const StringComponent: React.FC = () => {
       arrayElements[start].state = ElementStates.Changing
       arrayElements[end].state = ElementStates.Changing
       setInputValue([...arrayElements]);
-      await delay(1000)
+      await delay(DELAY_IN_MS)
       swap(arrayElements, start, end)
       arrayElements[start].state = ElementStates.Modified
       arrayElements[end].state = ElementStates.Modified

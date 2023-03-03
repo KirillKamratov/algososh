@@ -5,6 +5,7 @@ import { Input } from "../ui/input/input";
 import { Button } from "../ui/button/button";
 import { delay } from "../../utils/utils";
 import {Circle} from "../ui/circle/circle";
+import {SHORT_DELAY_IN_MS} from "../../constants/delays";
 
 export const FibonacciPage: React.FC = () => {
 
@@ -33,7 +34,7 @@ export const FibonacciPage: React.FC = () => {
     const arr: number[] = []
 
     while (index <= Number(number)) {
-      await delay(500)
+      await delay(SHORT_DELAY_IN_MS)
       arr.push(fibonacciArray[index])
       setInputValue([...arr])
       index ++
