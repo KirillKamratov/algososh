@@ -26,7 +26,7 @@ export const ListPage: React.FC = () => {
   const [ deleteTailLoader, setDeleteTailLoader ] = useState(false);
   const [ deleteByIndexLoader, setDeleteByIndexLoader ] = useState(false);
   const [ addByIndexLoader, setAddByIndexLoader ] = useState(false);
-  const [circles, setCircles] = useState(
+  const [ circles, setCircles ] = useState(
     <div className={listStyles.list}></div>
   );
 
