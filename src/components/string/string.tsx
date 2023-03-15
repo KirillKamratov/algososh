@@ -61,6 +61,7 @@ export const StringComponent: React.FC = () => {
           maxLength={11}
           onChange={onChange}
           value={isLoading ? 'Пожалуйста, ожидайте': array}
+          data-testid={"input"}
         />
         <Button
           text={'Развернуть'}
@@ -68,12 +69,13 @@ export const StringComponent: React.FC = () => {
           linkedList={'small'}
           disabled={!array}
           isLoader={isLoading}
+          data-testid={"button"}
         />
       </form>
       <ul className={stringStyles.listArray}>
         {inputValue.map((elem, key) => {
           return (
-            <li key={key}>
+            <li key={key} className={stringStyles.item}>
               <Circle
                 state={elem.state}
                 letter={elem.value}

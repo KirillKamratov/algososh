@@ -79,6 +79,7 @@ export const StackPage: React.FC = () => {
           maxLength={4}
           onChange={onChange}
           value={inputValue}
+          data-testid={"input"}
         />
         <Button
           text={'Добавить'}
@@ -86,6 +87,7 @@ export const StackPage: React.FC = () => {
           linkedList={'small'}
           disabled={!inputValue}
           isLoader={isLoading.add}
+          data-testid={"addButton"}
         />
         <Button
           text={'Удалить'}
@@ -93,6 +95,7 @@ export const StackPage: React.FC = () => {
           disabled={disabled || array.length == 0}
           onClick={deleteItem}
           isLoader={isLoading.delete}
+          data-testid={"deleteButton"}
         />
         <Button
           extraClass={stackStyles.clear}
@@ -101,6 +104,7 @@ export const StackPage: React.FC = () => {
           disabled={disabled || array.length == 0}
           onClick={clearStack}
           isLoader={isLoading.clear}
+          data-testid={"clearButton"}
         />
       </form>
       <ul className={stackStyles.listStack}>

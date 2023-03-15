@@ -56,6 +56,7 @@ export const FibonacciPage: React.FC = () => {
           type={'number'}
           onChange={onChange}
           value={isLoading ? 'Пожалуйста, ожидайте': number}
+          data-testid={"input"}
         />
         <Button
           text={'Рассчитать'}
@@ -63,12 +64,13 @@ export const FibonacciPage: React.FC = () => {
           linkedList={'small'}
           disabled={!number}
           isLoader={isLoading}
+          data-testid={"button"}
         />
       </form>
       <ul className={fibonacciStyles.listFib}>
         {inputValue?.map((number, key) => {
           return (
-            <li key={key}>
+            <li key={key} data-testid={"item"}>
               <Circle
                 letter={`${number}`}
                 index={key}

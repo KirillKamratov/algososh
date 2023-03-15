@@ -52,7 +52,7 @@ describe('Testing ascending sorting algorithms', () => {
 
   it('Ascending bubble sorting algorithm with single output array', async () => {
     await bubbleSortingASC(singleOutputArray, setLoader, setArray)
-    expect(setArray).toHaveBeenCalledTimes(1)
+    expect(setArray).toHaveBeenCalledTimes(0)
   })
 
   it('Ascending selection sorting algorithm with empty array', async () => {

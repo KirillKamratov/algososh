@@ -10,6 +10,9 @@ export const bubbleSortingASC = async (
   setLoader: Dispatch<SetStateAction<boolean>>,
   setArray: Dispatch<SetStateAction<TSorting[]>>
 ) => {
+  if (arr.length < 3) {
+    return
+  }
   setLoader(true)
   for (let i = 0; i < arr.length; i++) {
     for (let j = 0; j < arr.length - i - 1; j++) {
@@ -33,6 +36,9 @@ export const bubbleSortingDESC = async (
   setLoader: Dispatch<SetStateAction<boolean>>,
   setArray: Dispatch<SetStateAction<TSorting[]>>
 ) => {
+  if (arr.length < 3) {
+    return
+  }
   setLoader(true)
   for (let i = 0; i < arr.length; i++) {
     for (let j = 0; j < arr.length - i - 1; j++) {
@@ -55,6 +61,9 @@ export const selectionSortingASC = async (
   setLoader: Dispatch<SetStateAction<boolean>>,
   setArray: Dispatch<SetStateAction<TSorting[]>>
 ) => {
+  if (arr.length < 3) {
+    return
+  }
   setLoader(true)
   for (let i = 0; i< arr.length - 1; i++) {
     for (let i = 0; i < arr.length - 1; i++) {
@@ -84,8 +93,9 @@ export const selectionSortingDESC = async (
   setLoader: Dispatch<SetStateAction<boolean>>,
   setArray: Dispatch<SetStateAction<TSorting[]>>
 ) => {
-  if (arr.length < 3) return;
-
+  if (arr.length < 3) {
+    return
+  }
   setLoader(true);
   for (let i = 0; i < arr.length - 1; i++) {
     let max = i;
