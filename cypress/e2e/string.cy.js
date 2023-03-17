@@ -1,26 +1,26 @@
-import { colors } from "../../src/constants/styles"
+import { borderColors } from "../../src/constants/styles"
 import { BASE_URL } from "../../src/constants/url"
 import {DELAY_IN_MS} from "../../src/constants/delays"
 
 
 const mockData = [
   [
-    { value: "t", color: colors.changing },
-    { value: "e", color: colors.default },
-    { value: "s", color: colors.default },
-    { value: "t", color: colors.changing },
+    { value: "t", color: borderColors.changing },
+    { value: "e", color: borderColors.default },
+    { value: "s", color: borderColors.default },
+    { value: "t", color: borderColors.changing },
   ],
   [
-    { value: "t", color: colors.modified },
-    { value: "e", color: colors.changing },
-    { value: "s", color: colors.changing },
-    { value: "t", color: colors.modified },
+    { value: "t", color: borderColors.modified },
+    { value: "e", color: borderColors.changing },
+    { value: "s", color: borderColors.changing },
+    { value: "t", color: borderColors.modified },
   ],
   [
-    { value: "t", color: colors.modified },
-    { value: "s", color: colors.modified },
-    { value: "e", color: colors.modified },
-    { value: "t", color: colors.modified },
+    { value: "t", color: borderColors.modified },
+    { value: "s", color: borderColors.modified },
+    { value: "e", color: borderColors.modified },
+    { value: "t", color: borderColors.modified },
   ],
 ]
 

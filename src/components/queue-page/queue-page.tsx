@@ -90,6 +90,7 @@ export const QueuePage: React.FC = () => {
           maxLength={4}
           onChange={onChange}
           value={inputValue}
+          data-testid={"inputField"}
         />
         <Button
           text={'Добавить'}
@@ -97,6 +98,7 @@ export const QueuePage: React.FC = () => {
           linkedList={'small'}
           disabled={!inputValue || queue.isFull()}
           isLoader={isLoading.add}
+          data-testid={"addButton"}
         />
         <Button
           text={'Удалить'}
@@ -104,6 +106,7 @@ export const QueuePage: React.FC = () => {
           disabled={disabled || queue.isEmpty()}
           onClick={deleteItem}
           isLoader={isLoading.delete}
+          data-testid={"deleteButton"}
         />
         <Button
           extraClass={queueStyles.clear}
@@ -112,6 +115,7 @@ export const QueuePage: React.FC = () => {
           disabled={disabled || queue.getTail() === 0}
           onClick={clearQueue}
           isLoader={isLoading.clear}
+          data-testid={"clearButton"}
         />
       </form>
       <ul className={queueStyles.listQueue}>
