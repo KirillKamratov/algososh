@@ -276,6 +276,7 @@ export const ListPage: React.FC = () => {
           extraClass={listStyles.input}
           value={inputValue}
           onChange={onChange}
+          data-testid={"inputValue"}
         />
         <Button
           text="Добавить в head"
@@ -283,6 +284,7 @@ export const ListPage: React.FC = () => {
           linkedList="small"
           isLoader={addHeadLoader}
           disabled={inputIsEmpty || disabled}
+          data-testid={"addToHeadButton"}
         />
         <Button
           text="Добавить в tail"
@@ -290,6 +292,7 @@ export const ListPage: React.FC = () => {
           linkedList="small"
           isLoader={addTailLoader}
           disabled={inputIsEmpty || disabled}
+          data-testid={"addToTailButton"}
         />
         <Button
           text="Удалить из head"
@@ -297,6 +300,7 @@ export const ListPage: React.FC = () => {
           linkedList="small"
           isLoader={deleteHeadLoader}
           disabled={linkedListIsEmpty || disabled}
+          data-testid={"removeFromHeadButton"}
         />
         <Button
           text="Удалить из tail"
@@ -304,6 +308,7 @@ export const ListPage: React.FC = () => {
           linkedList="small"
           isLoader={deleteTailLoader}
           disabled={linkedListIsEmpty || disabled}
+          data-testid={"removeFromTailButton"}
         />
       </div>
       <div className={listStyles.wrapper}>
@@ -315,6 +320,7 @@ export const ListPage: React.FC = () => {
           max={9}
           value={inputIndex}
           onChange={onIndexChange}
+          data-testid={"inputIndex"}
         />
         <Button
           text='Добавить по индексу'
@@ -323,6 +329,7 @@ export const ListPage: React.FC = () => {
           onClick={addElementByIndex}
           isLoader={addByIndexLoader}
           disabled={inputIsEmpty || indexInputIsEmpty || disabled || disabledByIndex}
+          data-testid={"addByIndexButton"}
         />
         <Button
           text='Удалить по индексу'
@@ -331,6 +338,7 @@ export const ListPage: React.FC = () => {
           onClick={removeElementByIndex}
           isLoader={deleteByIndexLoader}
           disabled={linkedListIsEmpty || indexInputIsEmpty || disabled || disabledByIndex}
+          data-testid={"removeByIndexButton"}
         />
       </div>
       {circles}
